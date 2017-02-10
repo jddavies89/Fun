@@ -17,9 +17,6 @@
   https://github.com/joer89/Media/
 #>
 
-
-
-
 #Define the veribles for copying my TV Programs.
 $CopyTV = "T:\"
 $PastTV = "G:\TV"
