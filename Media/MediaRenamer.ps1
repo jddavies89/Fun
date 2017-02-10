@@ -33,7 +33,7 @@
    PS C:\> Rename-Episode -Path c:\ohtemp -LogChanges -PlexFormat -PathToTVMedia c:\Moved
    Looks for files to rename in c:\ohtemp to the plex naming convention, moves the renamed files to c:\moved and logs the results.
 .LINK
-  https://github.com/joer89/Media/
+  https://github.com/joer89/Fun/
 #>
 
 function Rename-Episode {
