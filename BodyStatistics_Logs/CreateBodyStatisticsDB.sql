@@ -56,6 +56,6 @@ go
 Testing
 Insert INTO tblJonSmith (MyWeight,FatPercentage,Hight,Shoulder,Chest,Arms,Waist,Upper_leg,Lower_Leg,Date_Time) values (170.4,14.4,170.2,85.3,90.2,20,73.2,23,10,210220171235)
 Insert INTO tblJonSmith (MyWeight,FatPercentage,Hight,Shoulder,Chest,Arms,Waist,Upper_leg,Lower_Leg,Date_Time) values (160.4,14.4,150.2,89.3,96.2,23,75.2,230,20,210220171235)
-select * from tbJonSmith
+select * from tblJonSmith
 
 */
