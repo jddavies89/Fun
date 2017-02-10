@@ -18,7 +18,6 @@
         Upper leg circumference.
         Lower Leg circumference.
         Logs the date and time.
-
 .Notes
         Author: Joe Richards
         Date:   10-02-2017
