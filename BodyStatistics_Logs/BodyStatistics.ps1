@@ -25,6 +25,7 @@
   https://github.com/joer89/Fun/BodyStatistics_Logs/
 #>
 
+
 #Displays all query.
 $SQLSelectAll =  "SELECT * FROM tblJoeRichards"
 #Inserts new line query.
