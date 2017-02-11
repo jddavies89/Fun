@@ -1,7 +1,7 @@
 /* 
 Description
 	Creates the database for the BodyStatistics program.
-	You can edit the tablename to suit you as at the moment its tblJonSmith.
+	You can edit the tablename to suit you.
 .Notes   
 	Author: Joe Richards   
 	Date:   11/Feb/2017
