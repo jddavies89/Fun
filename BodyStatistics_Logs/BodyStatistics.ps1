@@ -31,7 +31,7 @@ $SQLSelectAll =  "SELECT * FROM tblJoeRichards"
 #Inserts new line query.
 $SQLInsertNewLine = "Insert INTO tblJoeRichards (MyWeight,FatPercentage,Hight,Shoulder,Chest,Arms,Waist,Upper_leg,Lower_Leg,Date_Time) values ('$MyWeight','$FatPercentage','$Hight','$Shoulder','$Chest','$Arms','$Waist','$Upper_leg','$Lower_Leg','$Date_Time')"
 #Connection string to the BodyStatistics database.
-$ConnString = "SERVER=Localhost; database=BodyStatistics; USER Id=sa; Password=sa;"
+$ConnString = "SERVER=localhost; database=BodyStatistics; USER Id=sa; Password=sa;"
 #Gives the strings a purpose.
 $conn = New-Object System.Data.SqlClient.SqlConnection
 $cmd = New-Object System.Data.SqlClient.SqlCommand
@@ -39,6 +39,8 @@ $cmd = New-Object System.Data.SqlClient.SqlCommand
 $cmd.Connection = $conn
 #uses the connection string for connecting to the SQL DB BodyStatistics.
 $conn.ConnectionString = $ConnString
+#Logs if conencted or not.
+$connected = $false
 
 #Creates the connection to SQL.
 function SQLConnect{
@@ -47,10 +49,12 @@ function SQLConnect{
         $conn.Open()
         #Writes on the screen.
         Write-host "Connected."
+        $connected = $true
     }
     catch{        
         #Writes on the screen.
         Write-Host "Failed to connect to the database BodyStatistics."
+        $connected = $false
     }
 }#end function
 
@@ -59,9 +63,11 @@ function SQLConnClose{
     try{
         #Close the SQL Connection.
         $conn.Close()
+        $connected = $true
     }
     catch{
         Write-Host "Failed to close the connection to the BodyStatistics database."
+        $connected = $false
     }
 }#End function
 
@@ -71,29 +77,31 @@ function SQLReader{
     cls
     #Opens the connection.
     SQLConnect
-    #Queries everything from the database.
-    $cmd.CommandText = $SQLSelectAll
-    #Reads the Data from the database.
-    $result = $cmd.ExecuteReader()
-    #Reads the results from the SQL Database.
-    while($result.Read()){  
-        #Writes the SQL data on the screen.     
-        Write-Host "Weight: $($result.GetValue(0))"
-        Write-Host "Fat Percentage: $($result.GetValue(1))"
-        Write-Host "Hight: $($result.GetValue(2))"
-        Write-Host "Shoulders: $($result.GetValue(3))" 
-        Write-Host "Chest: $($result.GetValue(4))"
-        Write-Host "Arms: $($result.GetValue(5))" 
-        Write-Host "Waist: $($result.GetValue(6))"  
-        Write-Host "Upper leg: $($result.GetValue(7))"
-        Write-Host "Lower leg: $($result.GetValue(8))"
-        Write-Host "Date: $($result.GetValue(9))"
-        Write-Host "`n"
+    if($connected){
+        #Queries everything from the database.
+        $cmd.CommandText = $SQLSelectAll
+        #Reads the Data from the database.
+        $result = $cmd.ExecuteReader()
+        #Reads the results from the SQL Database.
+        while($result.Read()){  
+            #Writes the SQL data on the screen.     
+            Write-Host "Weight: $($result.GetValue(0))"
+            Write-Host "Fat Percentage: $($result.GetValue(1))"
+            Write-Host "Hight: $($result.GetValue(2))"
+            Write-Host "Shoulders: $($result.GetValue(3))" 
+            Write-Host "Chest: $($result.GetValue(4))"
+            Write-Host "Arms: $($result.GetValue(5))" 
+            Write-Host "Waist: $($result.GetValue(6))"  
+            Write-Host "Upper leg: $($result.GetValue(7))"
+            Write-Host "Lower leg: $($result.GetValue(8))"
+            Write-Host "Date: $($result.GetValue(9))"
+            Write-Host "`n"
+        }
+        #Close the reader.
+        $result.Close()
+        #Close the connection
+        SQLConnClose
     }
-    #Close the reader.
-    $result.Close()
-    #Close the connection
-    SQLConnClose
     #Displays the main menu.
     Menu
 }#End function
@@ -123,13 +131,15 @@ function QueryUser{
 function SQLInsertBodyStat{
     #Clears the screen.
     cls
-    #Opens the connection.
-    SQLConnect
-    #Queries everything from the database.
-    $cmd.CommandText = $SQLInsertNewLine 
-    $cmd.ExecuteNonQuery()
-    #Close the connection
-    SQLConnClose
+     if($connected){
+        #Opens the connection.
+        SQLConnect
+        #Queries everything from the database.
+        $cmd.CommandText = $SQLInsertNewLine 
+        $cmd.ExecuteNonQuery()
+        #Close the connection
+        SQLConnClose
+     }
     #Displays the main menu.
     Menu
 }#End function
