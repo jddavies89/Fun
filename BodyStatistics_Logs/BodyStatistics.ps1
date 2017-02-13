@@ -130,16 +130,16 @@ function QueryUser{
 #Inserts a new line to the SQL Database.
 function SQLInsertBodyStat{
     #Clears the screen.
-    cls
+    cls    
+    #Opens the connection.
+    SQLConnect
      if($connected){
-        #Opens the connection.
-        SQLConnect
         #Queries everything from the database.
         $cmd.CommandText = $SQLInsertNewLine 
         $cmd.ExecuteNonQuery()
-        #Close the connection
-        SQLConnClose
-     }
+    }
+    #Close the connection
+    SQLConnClose
     #Displays the main menu.
     Menu
 }#End function
