@@ -3,7 +3,7 @@
   AUTHOR        :   Joe Richards
   CREATE DATE   :   15/07/2017
   PURPOSE       :   Catch as many benanas a posible without the enemy catching the monkey.
-  VERSION       :   1.0
+  VERSION       :   1.0 (Written in Visual Studio 2017 Community)
 ============================================================================================
 
 This file is part of Monkey Attack.
