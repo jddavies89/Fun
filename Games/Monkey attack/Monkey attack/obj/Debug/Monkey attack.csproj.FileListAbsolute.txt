@@ -1,0 +1,18 @@
+\\regis\staffadmin$\jrichards\documents\visual studio 2017\Projects\Monkey attack\Monkey attack\obj\Debug\Monkey attack.csprojResolveAssemblyReference.cache
+\\regis\staffadmin$\jrichards\documents\visual studio 2017\Projects\Monkey attack\Monkey attack\obj\Debug\Monkey_attack.frmMain.resources
+\\regis\staffadmin$\jrichards\documents\visual studio 2017\Projects\Monkey attack\Monkey attack\obj\Debug\Monkey_attack.Properties.Resources.resources
+\\regis\staffadmin$\jrichards\documents\visual studio 2017\Projects\Monkey attack\Monkey attack\obj\Debug\Monkey attack.csproj.GenerateResource.Cache
+\\regis\staffadmin$\jrichards\documents\visual studio 2017\Projects\Monkey attack\Monkey attack\bin\Debug\Monkey attack.exe.config
+\\regis\staffadmin$\jrichards\documents\visual studio 2017\Projects\Monkey attack\Monkey attack\bin\Debug\Monkey attack.exe
+\\regis\staffadmin$\jrichards\documents\visual studio 2017\Projects\Monkey attack\Monkey attack\bin\Debug\Monkey attack.pdb
+\\regis\staffadmin$\jrichards\documents\visual studio 2017\Projects\Monkey attack\Monkey attack\obj\Debug\Monkey attack.exe
+\\regis\staffadmin$\jrichards\documents\visual studio 2017\Projects\Monkey attack\Monkey attack\obj\Debug\Monkey attack.pdb
+C:\Users\Joe\Desktop\Monkey attack\Monkey attack\obj\Debug\Monkey attack.csprojResolveAssemblyReference.cache
+C:\Users\Joe\Desktop\Monkey attack\Monkey attack\obj\Debug\Monkey_attack.frmMain.resources
+C:\Users\Joe\Desktop\Monkey attack\Monkey attack\obj\Debug\Monkey_attack.Properties.Resources.resources
+C:\Users\Joe\Desktop\Monkey attack\Monkey attack\obj\Debug\Monkey attack.csproj.GenerateResource.Cache
+C:\Users\Joe\Desktop\Monkey attack\Monkey attack\obj\Debug\Monkey attack.exe
+C:\Users\Joe\Desktop\Monkey attack\Monkey attack\obj\Debug\Monkey attack.pdb
+C:\Users\Joe\Desktop\Monkey attack\Monkey attack\bin\Debug\Monkey attack.exe.config
+C:\Users\Joe\Desktop\Monkey attack\Monkey attack\bin\Debug\Monkey attack.exe
+C:\Users\Joe\Desktop\Monkey attack\Monkey attack\bin\Debug\Monkey attack.pdb
