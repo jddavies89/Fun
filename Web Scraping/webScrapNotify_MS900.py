@@ -22,7 +22,7 @@ import datetime
 
 #Requests the website we are looking at.
 url ="https://www.microsoftpressstore.com/store/exam-ref-ms-900-microsoft-365-fundamentals-9780136484875"
-page = requests.get(url
+page = requests.get(url)
 
 #Gets the html content.
 soup = BeautifulSoup(page.content, 'html.parser')
